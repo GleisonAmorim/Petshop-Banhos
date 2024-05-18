@@ -2,6 +2,8 @@
 
 Este é um projeto de um petshop desenvolvido em Python/Django.
 
+Vídeo com a aplicação funcionando: https://www.linkedin.com/feed/update/urn:li:activity:7197625285364592640/
+
 Página de inicio
 ![pagina inicial](https://github.com/GleisonAmorim/Petshop-Banhos/assets/54336609/e5e06583-714b-485c-b0b4-0981cdc79115)
 
