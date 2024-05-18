@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "manage.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "src": "^/static/(.*)", "dest": "/staticfiles/$1", "headers": { "Cache-Control": "max-age=604800" } },
+      { "src": "/(.*)", "dest": "/manage.py" }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "Petshop.settings"
+    }
+  }
+  
