@@ -14,6 +14,7 @@ Página de Contato
 
 
 Página de Variedades
+
 ![Infográfico_de_resoluções_de_Ano_Novo_divertido_e_colorido-removebg-preview](https://github.com/GleisonAmorim/Petshop-Banhos/assets/54336609/7b5dae0d-e125-45c4-8304-563c56bc5084)
 
 Página de Admin
