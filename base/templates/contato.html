@@ -1,0 +1,32 @@
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+
+{% block principal %}
+    <br>
+    {% if not sucesso %}
+    <br>
+        <h2>Fale Conosco</h2>
+        <p>
+            Envie uma mensagem através do formulário abaixo ou ligue para o telefone {{ telefone }} 
+            falando com o responsável {{ responsavel }}
+        </p>
+        <br>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <hr>
+            <button type="submit" class="btn btn-reserva btn-custom-size"><b>Enviar</b></button>
+          </form>
+    {% else %}
+    <br><br>
+        <p class="alert alert-success">Mensagem enviada com sucesso!</p>
+    {% endif %}
+{% endblock %}
+
+{% block botoes %}
+    <div class="container text-center mt-3">
+        <a href="{% url 'reserva:criar_reserva' %}" class="btn btn-primary me-2 btn-custom-size">Reservar</a>
+        <a href="/contato" class="btn btn-primary me-2 btn-custom-size">Contato</a>
+        <a href="/blog.html" class="btn btn-primary btn-custom-size">Blog</a>
+    </div>
+{% endblock %}

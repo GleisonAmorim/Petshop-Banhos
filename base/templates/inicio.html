@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Pet - Reserve o banho do seu Pet</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'starter-template.css' %}" rel="stylesheet">
+    <link href="{% static 'css/meu_estilo.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+        <header class="header-custom d-flex align-items-center justify-content-between pb-3 mb-5 border-bottom">
+            <div>
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                    <img src="{% static 'imgs/logo.png' %}" alt="Logo" class="me-4 logo-img">
+                </a>
+            </div>
+        </header>
+        <div class="buttons-container text-center mb-3">
+            <br><br><br><br>
+            <a href="{% url 'reserva:criar_reserva' %}" class="btn btn-reserva btn-primary me-2 btn-custom-size">Reservar</a>
+            <a href="/contato" class="btn btn-contato btn-primary me-2 btn-custom-size">Contato</a>
+            <a href="/blog" class="btn btn-blog btn-primary btn-custom-size">Variedades</a>
+        </div>
+        {% block principal %}
+        <main>
+            <br><br>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'imgs/1.JPG' %}" class="d-block w-100 carousel-image" alt="Imagem 1">
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% endblock %}
+    </div>
+    
+    <footer class="pt-5 my-5 text-muted border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Telefone:</strong> (XX) XXXX-XXXX</li>
+                        <li><strong>Email:</strong> contato@happypet.com</li>
+                        <li><strong>Endereço:</strong> Rua ABC, 123 - Cidade - Estado</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociais</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Sobre Nós</h5>
+                    <p>Happy Pet oferece os melhores serviços de banho para seus pets. Estamos comprometidos em proporcionar uma experiência agradável para o seu animal de estimação.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    
+    </body>
+    </html>

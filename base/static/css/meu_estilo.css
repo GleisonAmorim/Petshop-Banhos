@@ -1,0 +1,131 @@
+body {
+    padding-top: 60px; /* Ajuste para o cabeçalho não sobrepor o conteúdo */
+    padding-bottom: 0; /* Remover o espaço entre o conteúdo e o footer */
+    margin: 0; /* Remova a margem padrão do body */
+    background-color: #587DC6; /* Cor de fundo da página */
+}
+
+
+/* Cabeçalho */
+.header-custom {
+    background-color: #587DC6; /* Cor de fundo do cabeçalho */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao cabeçalho */
+    padding: 1px; /* Adiciona espaçamento interno */
+    position: fixed; /* Fixa o cabeçalho no topo da tela */
+    top: 0; /* Define a posição superior como 0 */
+    left: 0; /* Define a posição esquerda como 0 */
+    right: 0; /* Define a posição direita como 0 */
+    width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de qualquer outro conteúdo */
+}
+
+/* Logo */
+.logo-img {
+    max-width: 200px; /* Define a largura máxima para a logo */
+    height: auto; /* Mantém a proporção da altura */
+    display: block; /* Garante que a imagem seja exibida como um bloco */
+    margin-left: auto; /* Centraliza a logo horizontalmente */
+    margin-right: auto; /* Centraliza a logo horizontalmente */
+}
+
+/* Botões */
+.btn-custom,
+.btn-reserva,
+.btn-contato,
+.btn-blog {
+    background-color: #FFC20D; /* Cor de fundo */
+    border-color: #FFC20D; /* Cor da borda */
+    color: #fff; /* Cor do texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra aos botões */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s; /* Transição suave */
+    width: 30vw; /* Largura do botão em relação à largura da tela */
+    height: 40px; /* Altura do botão */
+    font-size: 14px; /* Tamanho da fonte */
+    margin: 5px; /* Espaçamento entre os botões */
+}
+
+.btn-custom:hover,
+.btn-reserva:hover,
+.btn-contato:hover,
+.btn-blog:hover {
+    background-color: #ffcf40; /* Cor de fundo ao passar o mouse */
+    border-color: #ffcf40; /* Cor da borda ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.btn-custom-size,
+.btn-reserva,
+.btn-contato,
+.btn-blog {
+    width: 120px; /* Defina o tamanho desejado */
+    margin: 0 5px; /* Espaçamento entre os botões */
+}
+
+/* Botões para dispositivos móveis */
+@media (max-width: 767px) {
+    .btn-custom,
+    .btn-reserva,
+    .btn-contato,
+    .btn-blog {
+        width: calc(30% - 10px); /* Largura do botão (100% da largura da tela - margem) */
+        margin: 5px; /* Espaçamento entre os botões */
+    }
+}
+
+/* Carrossel */
+.carousel-item img {
+    border-radius: 15px; /* Bordas arredondadas para as imagens do carrossel */
+}
+
+/* Conteúdo da página */
+.main-content {
+    margin-bottom: 0; /* Remova a margem inferior do conteúdo principal */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo cinza claro transparente */
+    padding: 50px 0; /* Adiciona espaçamento interno no footer */
+    left: 0; /* Define a posição esquerda como 0 */
+    bottom: 0; /* Define a posição inferior como 0 */
+    width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
+}
+
+/* Estilo para o texto no footer */
+footer h5 {
+    color: #ffffff; /* Cor do texto no footer */
+    text-align: center; /* Centraliza o texto */
+}
+
+footer p, footer ul {
+    color: #a5abb1; /* Cor do texto no footer */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho do texto ajustado para dispositivos móveis */
+}
+
+/* Estilo para os links no footer */
+footer a {
+    color: #007bff; /* Cor dos links no footer */
+}
+
+/* Estilo para os links no footer quando hover */
+footer a:hover {
+    color: #0056b3; /* Cor dos links no hover no footer */
+}
+
+/* Estilo para adicionar bordas separadoras */
+footer .col-md-4 {
+    border-right: 1px solid #dee2e6; /* Adiciona borda à direita */
+    margin-bottom: 30px; /* Adiciona margem inferior para separação */
+    padding-bottom: 20px; /* Adiciona espaçamento interno na parte inferior */
+}
+
+footer .col-md-4:last-child {
+    border-right: none; /* Remove borda da última coluna */
+}
+
+/* Adiciona espaçamento entre os itens do rodapé */
+footer ul li {
+    margin-bottom: 10px;
+}

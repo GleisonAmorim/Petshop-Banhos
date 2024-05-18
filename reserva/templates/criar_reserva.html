@@ -1,0 +1,22 @@
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+
+{% block principal %}
+    <br>
+    {% if not sucesso %}
+    <br>
+        <h2>Faça a sua reserva</h2>
+        <p>Preencha todos os dados do formulário para realizar sua reserva</p>
+        <br>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <hr>
+            <button type="submit" class="btn btn-reserva btn-custom-size"><b>Reservar</b></button>
+        </form>
+    {% endif %}
+    {% if sucesso %}
+    <br><br>
+        <p class="alert alert-success">Reserva realizada com sucesso, em breve iremos entrar em contato!</p>
+    {% endif %}
+{% endblock %}
