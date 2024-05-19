@@ -1,14 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "manage.py", "use": "@vercel/python" }
-    ],
-    "routes": [
-      { "src": "^/static/(.*)", "dest": "/staticfiles/$1", "headers": { "Cache-Control": "max-age=604800" } },
-      { "src": "/(.*)", "dest": "/manage.py" }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "Petshop.settings"
-    }
-  }
-  
+  "builds": [{
+      "src": "Petshop/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+  }],
+  "routes": [
+      {
+          "src": "/(.*)",
+          "dest": "Petshop/wsgi.py"
+      }
+  ]
+}
