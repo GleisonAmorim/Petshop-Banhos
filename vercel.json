@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {
   "builds": [{
       "src": "Petshop/wsgi.py",
@@ -12,19 +12,3 @@
       }
   ]
 }
-=======
-{
-    "version": 2,
-    "builds": [
-      { "src": "manage.py", "use": "@vercel/python" }
-    ],
-    "routes": [
-      { "src": "^/static/(.*)", "dest": "/staticfiles/$1", "headers": { "Cache-Control": "max-age=604800" } },
-      { "src": "/(.*)", "dest": "/manage.py" }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "Petshop.settings"
-    }
-  }
-  
->>>>>>> bc6d518c609ef24e9d1adb15d4c872650bbf9b9d
