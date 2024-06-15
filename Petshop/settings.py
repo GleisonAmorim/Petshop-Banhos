@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-7kui3#no6#ud+m)x+f-2je5vd9opbm&zl6kt-gt&#%ugm!+-fh'
 DEBUG = True
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['.velcel.app']
 
 # Application definition
 INSTALLED_APPS = [
