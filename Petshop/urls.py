@@ -1,11 +1,11 @@
 from django.contrib import admin
 from django.urls import path, include
-from base.views import inicio, contato
+from base.views import index, contato
 from base.views import blog
 
 
 urlpatterns = [
-    path('', inicio),
+    path('', index),
     path('contato/', contato),
     path('reserva/', include('reserva.urls', namespace='reserva')),
     path('admin/', admin.site.urls),

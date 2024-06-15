@@ -4,8 +4,8 @@ from base.models import Contato, Reserva
 
 
 
-def inicio(request):
-    return render(request, 'inicio.html')
+def index(request):
+    return render(request, 'index.html')
 
 '''def contato(request):
     sucesso = False
