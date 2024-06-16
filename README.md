@@ -1,4 +1,5 @@
 # Petshop
+Link para acessar a aplicação: https://petshop-banhos.onrender.com/
 
 Este é um projeto de um petshop desenvolvido em Python/Django.
 
