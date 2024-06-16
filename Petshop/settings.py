@@ -3,14 +3,15 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
-DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+# Quick-start development settings - unsuitable for production
+SECRET_KEY = 'django-insecure-7kui3#no6#ud+m)x+f-2je5vd9opbm&zl6kt-gt&#%ugm!+-fh'
+DEBUG = True
 ALLOWED_HOSTS = ['petshop-banhos.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://petshop-banhos.onrender.com',
 ]
-
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -24,7 +25,6 @@ INSTALLED_APPS = [
     'reserva',
     'rest_framework',
     'rest_api',
-   
 ]
 
 MIDDLEWARE = [
@@ -35,8 +35,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.cache.UpdateCacheMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'Petshop.urls'
@@ -61,12 +59,8 @@ WSGI_APPLICATION = 'Petshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'petshop_db'),
-        'USER': os.getenv('DB_USER', 'petshop_user'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'petshop_password'),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -90,28 +84,18 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_TZ = True
 
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'base', 'static'),
     os.path.join(BASE_DIR, 'base', 'templates', 'assets'),
     os.path.join(BASE_DIR, 'base', 'templates', 'dist'),
+
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20
 }
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
-}
-
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
