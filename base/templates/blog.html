@@ -4,25 +4,28 @@
 
 {% block principal %}
 <br>
-    <div class="container"> <!-- Remova a classe text-center -->
-        <div class="row">
-                <div class="card mb-4">
-                    {% if post.titulo == 'Cuide da saúde bucal do seu pet' %}
-                    <img src="https://i.postimg.cc/5tm4nVYp/b1.jpg" class="card-img-top" alt="Imagem 1">
-                    {% elif post.titulo == 'Passeio no parque' %}
-                    <img src="https://i.postimg.cc/LX6HWbjS/b2.jpg" class="card-img-top" alt="Imagem 2">
-                    {% elif post.titulo == 'Alimentação saudável' %}
-                    <img src="https://i.postimg.cc/Y9npBzxW/b3.jpg" class="card-img-top" alt="Imagem 3">
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.titulo }}</h5>
-                        <div class="card-text">
-                            {{ post.conteudo | safe }} <!-- Utilizando safe para renderizar HTML -->
-                        </div>
+<div class="container"> <!-- Remova a classe text-center -->
+    <div class="row">
+        <div class="col-md-8 mx-auto"> <!-- Adicione a classe mx-auto -->
+            <br>
+            {% for post in posts %}
+            <div class="card mb-4">
+                {% if post.titulo == 'Cuide da saúde bucal do seu pet' %}
+                <img src="https://i.postimg.cc/5tm4nVYp/b1.jpg" class="card-img-top" alt="Imagem 1">
+                {% elif post.titulo == 'Passeio no parque' %}
+                <img src="https://i.postimg.cc/LX6HWbjS/b2.jpg" class="card-img-top" alt="Imagem 2">
+                {% elif post.titulo == 'Alimentação saudável' %}
+                <img src="https://i.postimg.cc/Y9npBzxW/b3.jpg" class="card-img-top" alt="Imagem 3">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.titulo }}</h5>
+                    <div class="card-text">
+                        {{ post.conteudo | safe }} <!-- Utilizando safe para renderizar HTML -->
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
+</div>
 {% endblock %}
