@@ -8,6 +8,9 @@ SECRET_KEY = 'django-insecure-7kui3#no6#ud+m)x+f-2je5vd9opbm&zl6kt-gt&#%ugm!+-fh
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://petshop-banhos.onrender.com',
+]
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
