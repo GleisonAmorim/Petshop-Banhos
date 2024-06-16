@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'reserva',
     'rest_framework',
     'rest_api',
-    'compressor',
+   
 ]
 
 MIDDLEWARE = [
