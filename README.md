@@ -31,7 +31,8 @@ O projeto Petshop é uma aplicação web para gerenciamento de reservas de banho
 
 - Cadastro e gestão de Reservas para banhos no Petshop.
 - Registrar contato "Fale conosco".
-
+- Acesso ao painel admin é pelo /admin user: ADMIN senha: Senha@123
+- 
 ## Licença
 
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
